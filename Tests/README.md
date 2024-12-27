@@ -1,8 +1,8 @@
 
-# Blocked Domain API - Tests
+# Blocked Domain Application - Tests
 
 ## Overview
-This README provides detailed information about the testing strategy and structure for the Blocked Domain API. The project employs comprehensive unit tests, integration tests, and end-to-end tests to ensure the robustness, reliability, and correctness of the application.
+This README provides detailed information about the testing strategy and structure for the Blocked Domain Application. The project employs comprehensive unit tests, integration tests, and end-to-end tests to ensure the robustness, reliability, and correctness of the application.
 
 ## Table of Contents
 - [Testing Strategy](#testing-strategy)
@@ -15,7 +15,7 @@ This README provides detailed information about the testing strategy and structu
 - [Advanced Testing Practices](#advanced-testing-practices)
 
 ## Testing Strategy
-The testing strategy for the Blocked Domain API encompasses multiple levels of testing to ensure comprehensive coverage:
+The testing strategy for the Blocked Domain Application encompasses multiple levels of testing to ensure comprehensive coverage:
 - **Unit Tests**: Focus on individual components, ensuring they work in isolation.
 - **Integration Tests**: Verify the interaction between multiple components.
 - **End-to-End Tests**: Test the complete flow of the application from end to end.
