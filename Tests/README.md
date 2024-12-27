@@ -242,8 +242,6 @@ public class BlockedDomainEndToEndTests : IClassFixture<WebApplicationFactory<We
 
 ```
 
-÷#*5#*'*
-
 ----------
 
 
