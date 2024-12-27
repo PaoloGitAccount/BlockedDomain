@@ -32,6 +32,7 @@ The tests are organized into three main categories:
 /Tests
     /UnitTests
         BlockedDomainServiceTests.cs
+        BlockedDomainServiceEdgeCasesTests.cs 
     /IntegrationTests
         BlockedDomainIntegrationTests.cs
     /EndToEndTests
