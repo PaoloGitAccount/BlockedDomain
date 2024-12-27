@@ -1,9 +1,8 @@
 # BlockedDomain
 
-# Blocked Domain API
 
 ## Overview
-Blocked Domain API is a sophisticated and scalable application designed to manage a collection of external domains that cannot be visited by users of a local network. If a domain is blocked, any of its subdomains are also blocked. This project incorporates best practices, SOLID principles, advanced architecture, and the latest technologies to ensure high performance, maintainability, and scalability.
+Blocked Domain is a sophisticated and scalable application designed to manage a collection of external domains that cannot be visited by users of a local network. If a domain is blocked, any of its subdomains are also blocked. This project incorporates best practices, SOLID principles, advanced architecture, and the latest technologies to ensure high performance, maintainability, and scalability.
 
 ## Table of Contents
 - [Technologies Used](#technologies-used)
@@ -184,4 +183,7 @@ This project is licensed under the MIT License.
 
 ---
 
-This `README.md` file aims to provide comprehensive details about the project, highlighting the use of best practices, SOLID principles, advanced technologies, and architecture. If you need further customization or additional details, feel free to ask! 😊
+## Improvements 
+GraphQL for efficient data fetching.
+
+ML.Net for Machine learning.
