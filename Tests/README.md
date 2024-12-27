@@ -121,7 +121,8 @@ public class BlockedDomainServiceTests
 
 ## Integration Tests
 ### Purpose
-Integration tests verify the interaction between multiple components to ensure they work together correctly. We use the ASP.NET Core WebApplicationFactory for setting up the test environment and HttpClient for making API requests.
+Integration tests verify the interaction between multiple components to ensure they work together correctly.
+We use the ASP.NET Core `WebApplicationFactory` for setting up the test environment and HttpClient for making API requests.
 
 ### Example: BlockedDomainIntegrationTests.cs
 ```csharp
