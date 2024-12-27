@@ -124,6 +124,7 @@ public class BlockedDomainServiceTests
 Integration tests verify the interaction between multiple components to ensure they work together correctly.
 
 ### Example: BlockedDomainIntegrationTests.cs
+```csharp
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -178,7 +179,9 @@ public class BlockedDomainIntegrationTests : IClassFixture<WebApplicationFactory
     }
 }
 
+```
 
+-‐-‐-‐-
 
 
 
