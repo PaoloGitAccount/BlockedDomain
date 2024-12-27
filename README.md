@@ -184,6 +184,6 @@ This project is licensed under the MIT License.
 ---
 
 ## Improvements 
-GraphQL for efficient data fetching.
-
-ML.Net for Machine learning.
+Possible Improvements in new version:
+- GraphQL for efficient data fetching.
+- ML.Net for Machine learning.
