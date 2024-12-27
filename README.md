@@ -67,6 +67,7 @@ This project follows Clean Architecture principles to separate concerns and enha
     /Tests
         /UnitTests
             BlockedDomainServiceTests.cs
+            BlockedDomainServiceEdgeCasesTests.cs
         /IntegrationTests
             BlockedDomainIntegrationTests.cs
         /EndToEndTests
