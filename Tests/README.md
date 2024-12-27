@@ -46,7 +46,7 @@ dotnet test
 
 ## Unit Tests
 ### Purpose
-Unit tests focus on testing individual components in isolation. They ensure that each component behaves as expected under various conditions.
+Unit tests focus on testing individual components in isolation. They ensure that each component behaves as expected under various conditions. we use the Moq Framework for mocking dependencies and xUnit for writing the test cases.
 
 ### Example: BlockedDomainServiceTests.cs
 ```csharp
@@ -124,7 +124,6 @@ public class BlockedDomainServiceTests
 Integration tests verify the interaction between multiple components to ensure they work together correctly.
 
 ### Example: BlockedDomainIntegrationTests.cs
-```csharp
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -132,3 +131,50 @@ using Newtonsoft.Json;
 using Xunit;
 
 public class BlockedDomainIntegrationTests : IClassFixture<WebApplicationFactory<WebApi.Startup>>
+{
+    private readonly HttpClient _client;
+
+    public BlockedDomainIntegrationTests(WebApplicationFactory<WebApi.Startup> factory)
+    {
+        _client = factory.CreateClient();
+    }
+
+    [Fact]
+    public async Task AddBlockedDomain_ShouldReturnOk()
+    {
+        var domain = new { Domain = "integrationtest.com" };
+        var content = new StringContent(JsonConvert.SerializeObject(domain), Encoding.UTF8, "application/json");
+
+        var response = await _client.PostAsync("/api/BlockedDomain", content);
+
+        response.EnsureSuccessStatusCode();
+    }
+
+    [Fact]
+    public async Task IsDomainBlocked_ShouldReturnTrue_WhenDomainIsBlocked()
+    {
+        var domain = new { Domain = "blockedtest.com" };
+        var content = new StringContent(JsonConvert.SerializeObject(domain), Encoding.UTF8, "application/json");
+
+        await _client.PostAsync("/api/BlockedDomain", content);
+
+        var response = await _client.GetAsync($"/api/BlockedDomain/isBlocked?domain={domain.Domain}");
+
+        response.EnsureSuccessStatusCode();
+
+        var result = await response.Content.ReadAsStringAsync();
+        Assert.True(bool.Parse(result));
+    }
+
+    [Fact]
+    public async Task GetAllBlockedDomains_ShouldReturnBlockedDomains()
+    {
+        var response = await _client.GetAsync("/api/BlockedDomain");
+
+        response.EnsureSuccessStatusCode();
+
+        var result = await response.Content.ReadAsStringAsync();
+        Assert.NotEmpty(result);
+    }
+}
+
